@@ -21,7 +21,7 @@ const Image = ({ path, w, h, alt, tr, className }: ImageProps) => {
       className={className}
       {...(tr
         ? {
-            transformation: [{ width: `${w}`, height: `${h}` }]
+            transformation: [{ width: `${w}`, height: `${h}` }],
           }
         : {
             width: w,

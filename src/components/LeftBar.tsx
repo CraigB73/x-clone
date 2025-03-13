@@ -1,6 +1,6 @@
-import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+import Image from "./Image";
 const menuList = [
   {
     id: 1,
@@ -70,7 +70,7 @@ const LeftBar = () => {
       <div className="flex flex-col gap-4 text-lg items-center xl:items-start">
         {/* LOGO */}
         <Link href="/">
-          <Image src="icons/logo.svg" alt="logo" width={24} height={24} />
+          <Image path="icons/logo.svg" alt="logo" w={24} h={24} />
         </Link>
 
         {/* MENU LIST*/}
@@ -81,12 +81,7 @@ const LeftBar = () => {
               key={item.id}
               className="flex p-2 rounded-full hover:bg-[#181818] gap-4"
             >
-              <Image
-                src={`icons/${item.icon}`}
-                alt="logo"
-                width={24}
-                height={24}
-              />
+              <Image path={`icons/${item.icon}`} alt="logo" w={24} h={24} />
               <span className="hidden xl:inline">{item.name}</span>
             </Link>
           ))}
@@ -94,10 +89,10 @@ const LeftBar = () => {
           <Link href="/">
             <Image
               className="xl:hidden fil-[#fff]"
-              src="icons/post.svg"
+              path="icons/post.svg"
               alt="nav button"
-              width={24}
-              height={24}
+              w={24}
+              h={24}
             />
           </Link>
           <Link
@@ -112,7 +107,13 @@ const LeftBar = () => {
       <div className="flex items-center justify-between">
         <div className="flex items-center gap-2">
           <div className="w-10 h-10 relative rounded-full overflow-hidden">
-            <Image src="/images/avatar.png" alt="dog with glasses" fill />
+            <Image
+              path="/images/avatar.png"
+              alt="dog with glasses"
+              w={100}
+              h={100}
+              tr={true}
+            />
           </div>
           <div className="hidden xl:flex flex-col">
             <span className="font-bold">EYEROCK</span>
