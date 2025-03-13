@@ -1,15 +1,14 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+/* Adding the (-*:initial) breaks out of defaults and sets new values in the project */
+@theme {
+  --breakpoint-*: initial;
+  --breakpoint-xsm: 400px;
+  --breakpoint-sm: 500px;
+  --breakpoint-md: 690px;
+  --breakpoint-lg: 988px;
+  --breakpoint-xl: 1078px;
+  --breakpoint-xxl: 1265px;
 }
 
 @media (prefers-color-scheme: dark) {
